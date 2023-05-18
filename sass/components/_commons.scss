@@ -11,6 +11,8 @@ svg {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* dots deleted from uls :)*/
 ul {
@@ -18,8 +20,15 @@ ul {
 }
 /* extra class for main div in each section of index.html and portfolio.html*/
 .container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+
+  @include tablet-size {
+    max-width: 768px;
+  }
+  @include desktop-size {
+    max-width: 1200px;
+  }
 }
 .section {
   padding-top: 94px;

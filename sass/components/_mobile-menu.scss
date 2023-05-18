@@ -3,7 +3,7 @@
   border: none;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 15px;
 
   @include tablet-size {
     display: none;
@@ -28,7 +28,8 @@
   width: 100vw;
   height: 100vh;
   background-color: getColor("object-secondary-background-color");
-  z-index: 999;
+  z-index: 1001;
+  overflow-y: auto;
   transform: translateX(100%);
   transition-property: transform;
   transition-duration: 800ms;
@@ -103,5 +104,6 @@
     margin-top: 64px;
     display: flex;
     column-gap: 10px;
+    flex-wrap: wrap;
   }
 }
