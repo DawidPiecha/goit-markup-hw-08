@@ -5,6 +5,10 @@
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  @include mobile-size {
+    display: none;
+  }
 }
 .navigation__list {
   display: flex;

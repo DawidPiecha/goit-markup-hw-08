@@ -5,6 +5,9 @@
   padding-bottom: 32px;
   padding-left: 0;
 
+  @include mobile-size {
+    display: none;
+  }
   &__icon {
     fill: getColor("parrent-color");
     width: 16px;

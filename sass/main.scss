@@ -1,4 +1,5 @@
 @import "./utils/vars";
+@import "./utils/mixins";
 @import "./components/commons";
 @import "./components/navigation";
 @import "./components/contact";
@@ -14,3 +15,4 @@
 @import "./components/filters";
 @import "./components/projects";
 @import "./components/modal";
+@import "./components/mobile-menu";
