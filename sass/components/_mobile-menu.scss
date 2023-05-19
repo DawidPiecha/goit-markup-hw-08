@@ -38,6 +38,9 @@
   @include tablet-size {
     display: none;
   }
+  &.menu-toggle {
+    position: absolute;
+  }
   &.is-open {
     transform: translateX(0);
   }
@@ -87,7 +90,6 @@
       font-size: 24px;
       line-height: 1.166;
       letter-spacing: 0.02em;
-      margin-bottom: 64px;
     }
     &--social {
       color: getColor("object-primary-background-color");
@@ -102,6 +104,7 @@
   }
   &__socials {
     margin-top: 64px;
+    padding-bottom: 48px;
     display: flex;
     column-gap: 10px;
     flex-wrap: wrap;

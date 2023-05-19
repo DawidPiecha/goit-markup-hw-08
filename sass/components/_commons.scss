@@ -62,7 +62,25 @@ footer {
   align-items: center;
 }
 .footer {
-  display: flex;
+  display: block;
+  text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @include tablet-size {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include desktop-size {
+    text-align: start;
+    flex-direction: row;
+  }
+}
+.flex-wrapper {
+  @include tablet-size {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }

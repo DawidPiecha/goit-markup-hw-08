@@ -19,15 +19,22 @@
     }
   }
   &--indented {
-    padding-left: 15px;
+    @include desktop-size {
+      padding-left: 15px;
+    }
   }
   &__text {
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 26px;
-    color: getColor("object-primary-background-color");
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
+    color: getColor("object-primary-background-color");
+
+    @include desktop-size {
+      font-size: 26px;
+      line-height: 1.19;
+    }
 
     &--black {
       color: getColor("text-quaternary-color");

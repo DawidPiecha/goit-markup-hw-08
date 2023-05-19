@@ -3,10 +3,12 @@
   justify-content: center;
   column-gap: 10px;
   align-items: center;
-  padding-bottom: 30px;
 
   &--start {
-    margin-right: 78px;
+    @include desktop-size {
+      margin-right: 78px;
+      padding-bottom: 30px;
+    }
   }
 }
 
