@@ -36,7 +36,14 @@
       0px 1px 1px getColor("tertiary-box-shadow-color"),
       0px 2px 1px getColor("quarternary-box-shadow-color");
     border-radius: 0px 0px 4px 4px;
-    width: 450px;
+    max-width: 450px;
+
+    @include tablet-size {
+      max-width: 354px;
+    }
+    @include desktop-size {
+      max-width: 270px;
+    }
   }
 
   &__name {
