@@ -5,24 +5,58 @@
       getColor("background-color-for-gradient"),
       getColor("background-color-for-gradient")
     );
-  background-size: cover;
+  background-size: 767px 100%;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
-  padding-bottom: 200px;
-  padding-top: 200px;
+  padding: 118px 0;
+  max-width: 100%;
+
+  @include desktop-size {
+    padding: 200px 0;
+    background-size: 1600px 100%;
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    & {
+      background-image: url("../images/background-image@2x.jpg"),
+        linear-gradient(
+          getColor("background-color-for-gradient"),
+          getColor("background-color-for-gradient")
+        );
+    }
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    & {
+      background-image: url("../images/background-image@3x.jpg"),
+        linear-gradient(
+          getColor("background-color-for-gradient"),
+          getColor("background-color-for-gradient")
+        );
+    }
+  }
 
   &__text {
     color: getColor("text-tertiary-color");
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
-    line-height: 1.36;
+    line-height: 1.61;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    min-height: 120px;
-    min-width: 696px;
+    min-height: 84px;
+    min-width: 365px;
     margin-bottom: 30px;
+
+    @include desktop-size {
+      font-size: 44px;
+      line-height: 1.36;
+      min-height: 120px;
+      min-width: 696px;
+    }
   }
   &__button {
     background-color: getColor("object-primary-background-color");
