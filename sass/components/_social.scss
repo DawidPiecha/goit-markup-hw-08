@@ -10,6 +10,12 @@
       padding-bottom: 30px;
     }
   }
+  &--team {
+    padding-bottom: 24px;
+    @include desktop-size {
+      padding-bottom: 18px;
+    }
+  }
 }
 
 .social__link {
