@@ -22,6 +22,9 @@
   }
 }
 .menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -99,11 +102,8 @@
       letter-spacing: 0.02em;
     }
   }
-  &__contacts {
-    margin-top: 302px;
-  }
+
   &__socials {
-    margin-top: 64px;
     padding-bottom: 48px;
     display: flex;
     column-gap: 10px;
