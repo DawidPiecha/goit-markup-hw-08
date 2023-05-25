@@ -16,10 +16,11 @@
 }
 .modal {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: calc(100% - 2 * 15px);
+
   padding: 40px 40px;
   background-color: getColor("page-quarternary-background-color");
   border-radius: 4px;
