@@ -47,7 +47,13 @@
   &.is-open {
     transform: translateX(0);
   }
+  &__flex {
+    display: flex;
+    flex-direction: column;
+  }
   &__list {
+    display: flex;
+    flex-direction: column;
     padding-top: 48px;
     padding-left: 40px;
     font-weight: 500;
@@ -102,7 +108,9 @@
       letter-spacing: 0.02em;
     }
   }
-
+  &__contacts {
+    margin-bottom: 64px;
+  }
   &__socials {
     padding-bottom: 48px;
     display: flex;
