@@ -1,14 +1,21 @@
 .projects {
   padding-top: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+
   background-color: getColor("page-quarternary-background-color");
 
   &__list {
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+    @include tablet-size {
+      column-gap: 30px;
+      justify-content: space-between;
+    }
+    @include desktop-size {
+      justify-content: center;
+    }
   }
 
   &__title {
@@ -34,6 +41,13 @@
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 450px;
+    @include tablet-size {
+      max-width: 354px;
+    }
+    @include desktop-size {
+      max-width: 370px;
+    }
 
     &:hover,
     &:focus {
@@ -45,28 +59,33 @@
 }
 .projects__image {
   position: relative;
-  width: 370px;
-  height: 294px;
   overflow: hidden;
 }
 .overlay {
   position: absolute;
   left: 0;
-  top: 294px;
-  padding: 49px 45px 49px 24px;
+  bottom: 0;
   width: 100%;
   height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  align-items: center;
   background-color: getColor("overlay-background-color");
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.03em;
   color: getColor("text-tertiary-color");
-  transform: translateY(0);
+  transform: translateY(100%);
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include desktop-size {
+    padding-right: 45px;
+  }
 }
 .projects__image:hover .overlay {
-  transform: translateY(-100%);
+  transform: translateY(0);
 }
